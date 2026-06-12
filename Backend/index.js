@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",
+    // "http://localhost:5173",
     "https://wevolve.vercel.app",
     'https://wevolve-git-main-swadhin-kars-projects.vercel.app'
   ],
@@ -29,5 +29,5 @@ app.use('/ai', aiRouter)
 const PORT = process.env.PORT || 7000
 
 app.listen(PORT, () => {
-  // console.log(`Server running on port ${PORT}`)
+  console.log(`Server running on port ${PORT}`)
 })

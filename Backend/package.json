@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Swadhin-kar/Jan-cohort.git"
+    "url": "git+https://github.com/Swadhinkar/Jan-cohort.git"
   },
   "author": "Swadhin kar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Swadhin-kar/Jan-cohort/issues"
+    "url": "https://github.com/Swadhinkar/Jan-cohort/issues"
   },
-  "homepage": "https://github.com/Swadhin-kar/Jan-cohort#readme",
+  "homepage": "https://github.com/Swadhinkar/Jan-cohort#readme",
   "dependencies": {
     "axios": "^1.13.2",
     "cors": "^2.8.5",
