@@ -47,10 +47,11 @@ const JD_OPENAI = async (req, res) => {
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:5173", // 🔥 Localhost development fallback
+          // "HTTP-Referer": "http://localhost:5173", //  Localhost development fallback
+          "HTTP-Referer": "https://wevolve.vercel.app", //  Localhost development fallback
           "X-Title": "Wevolve JD Builder",
         },
-        timeout: 10000, // ⏱️ Prevent hanging (10 seconds timeout)
+        timeout: 10000, //  Prevent hanging (10 seconds timeout)
       }
     );
   };
@@ -59,7 +60,7 @@ const JD_OPENAI = async (req, res) => {
     let response;
 
     try {
-      // 🔥 Try primary model first
+      //  Try primary model first
       console.log(`Attempting primary model: ${primaryModel}`);
       response = await makeRequest(primaryModel);
     } catch (err) {
@@ -78,7 +79,7 @@ const JD_OPENAI = async (req, res) => {
       }
     }
 
-    // 🧠 Robust extraction of the generated text
+    //  Robust extraction of the generated text
     let outputText = "";
 
     if (response?.data?.choices?.length > 0) {
